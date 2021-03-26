@@ -82,8 +82,16 @@ namespace nav_core {
        */
       virtual ~BaseLocalPlanner(){}
 
+      // asr_ftc_planner 
+      void setGlobalCostmap(costmap_2d::Costmap2DROS* global_costmap_ros){
+        global_costmap_ros_ = global_costmap_ros;
+      }
+
     protected:
       BaseLocalPlanner(){}
+
+      // asr_ftc_planner 
+      costmap_2d::Costmap2DROS* global_costmap_ros_;
   };
 };  // namespace nav_core
 

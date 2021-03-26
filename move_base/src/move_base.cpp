@@ -143,6 +143,8 @@ namespace move_base {
       exit(1);
     }
 
+    tc_->setGlobalCostmap(planner_costmap_ros_);
+
     // Start actively updating costmaps based on sensor data
     planner_costmap_ros_->start();
     controller_costmap_ros_->start();
